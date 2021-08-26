@@ -1,0 +1,36 @@
+%listreset{
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+
+%clearfix{
+    &:after{
+        content:'';
+        display: block;
+        clear: both;
+    }
+}
+
+.clearfix{
+    @extend %clearfix
+}
+%transition{
+    transition: all 0.3s ease-in-out;
+}
+
+.fade {
+    &-enter-active,
+    &-leave-active,
+    &-leave-to {
+      transition: .3s ease-out;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &-enter,
+    &-leave,
+    &-leave-to {
+      opacity: 0;
+    }
+  }
